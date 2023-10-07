@@ -1,11 +1,36 @@
+@keyframes spiral {
+    0% {background-position: 0% 50%;}
+    100% {background-position: 100% 50%;}
+}
+
 body {
-    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background: linear-gradient(132deg, #f6d365, #fda085);
+    background-size: 200% 200%;
+    animation: spiral 12s ease infinite;
     font-family: 'Arial', sans-serif;
     height: 100vh;
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px #ff0000;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
+    }
 }
 
 #player {
@@ -47,17 +72,6 @@ input[type=range] {
     border-radius: 10px;
 }
 
-button {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 25px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
 video {
     width: 100%;
     border-bottom: 3px solid #4caf50;
@@ -73,42 +87,4 @@ video {
 #time-info p {
     margin: 0;
     color: #555;
-}
-
-/* Arch Style for Selectors */
-#arch-controls {
-    position: absolute;
-    width: 100%;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-around;
-}
-
-#arch-controls > div {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-#arch-controls label {
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    color: #555;
-    position: absolute;
-    bottom: -20px;
-}
-
-#arch-controls select, 
-#arch-controls input {
-    width: 100%;
 }
