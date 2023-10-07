@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     font-family: 'Arial', sans-serif;
     height: 100vh;
     margin: 0;
@@ -17,6 +17,7 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 select, input, button {
@@ -25,28 +26,41 @@ select, input, button {
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
     outline: none;
     transition: box-shadow 0.3s ease-in-out;
 }
 
-select:focus, input:focus, button:focus {
-    box-shadow: 0 0 10px rgba(33, 33, 33, 0.2);
+select {
+    background-color: #f8f8f8;
+    color: #555;
+    border-radius: 25px;
 }
 
-video {
-    width: 100%;
-    border-bottom: 3px solid #4CAF50;
+input[type=date] {
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 25px;
+}
+
+input[type=range] {
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: #fff;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+video {
+    width: 100%;
+    border-bottom: 3px solid #4caf50;
 }
 
 #time-info {
@@ -59,4 +73,42 @@ button:hover {
 #time-info p {
     margin: 0;
     color: #555;
+}
+
+/* Arch Style for Selectors */
+#arch-controls {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+#arch-controls > div {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#arch-controls label {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    bottom: -20px;
+}
+
+#arch-controls select, 
+#arch-controls input {
+    width: 100%;
 }

@@ -7,29 +7,35 @@
 </head>
 <body>
     <div id="player">
-        <select id="country-selector">
-            <option value="usa">USA</option>
-            <option value="uk">UK</option>
-        </select>
+    <select id="event-selector">
+        <option value="none">Select Historic Event</option>
+        <option value="911">9/11</option>
+        <option value="2012">2012</option>
+        <option value="1947">1947</option>
+    </select>
 
-        <select id="channel-selector">
-            <!-- Channels will be dynamically loaded here -->
-        </select>
+    <select id="country-selector">
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="india">India</option>
+    </select>
 
-        <video id="video" width="640" height="360" controls>
-            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <select id="channel-selector"></select>
 
-        <input type="date" id="date-selector">
+    <video id="video" width="640" height="360" controls>
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <input type="range" id="time-selector" max="100" value="0" step="1">
+    <input type="date" id="date-selector">
 
-        <div id="time-info">
-            <p id="current-time-display">00:00</p>
-            <p id="total-time-display">00:00</p>
-        </div>
+    <input type="range" id="time-selector" max="100" value="0" step="1">
+
+    <div id="time-info">
+        <p id="current-time-display">00:00</p>
+        <p id="total-time-display">00:00</p>
     </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
