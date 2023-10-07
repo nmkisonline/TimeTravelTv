@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Advanced Video Player</title>
+</head>
+<body>
+    <div id="player">
+        <select id="country-selector">
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <select id="channel-selector">
+            <!-- Channels will be dynamically loaded here -->
+        </select>
+
+        <video id="video" width="640" height="360" controls>
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <input type="date" id="date-selector">
+
+        <input type="range" id="time-selector" max="100" value="0" step="1">
+
+        <div id="time-info">
+            <p id="current-time-display">00:00</p>
+            <p id="total-time-display">00:00</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
