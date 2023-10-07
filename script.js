@@ -72,5 +72,10 @@ function selectHistoricalEvent() {
         dateSelector.value = event.date;
         timeSelector.value = event.time;
         seekVideo();
+        
+        document.getElementById('spiral').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('spiral').classList.add('hidden');
+        }, 5000);
     }
 }
