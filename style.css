@@ -1,67 +1,57 @@
 body {
-    background: linear-gradient(132deg, #f6d365, #fda085);
-    font-family: 'Arial', sans-serif;
+    background: #121212;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 2px 2px #4caf50;
-    animation: glow 1s ease-in-out infinite alternate;
+.container {
+    text-align: center;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073;
-    }
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
-    }
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 255, 0, 0.7);
 }
 
 #player {
-    width: 80%;
-    max-width: 640px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
 }
 
-select, input {
-    margin-bottom: 10px;
+.selector {
     width: 80%;
     padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-select, input[type=date] {
-    background-color: #f8f8f8;
-    color: #555;
-    border-radius: 25px;
-}
-
-input[type=range] {
-    background-color: #f0f0f0;
-    color: #555;
-    border-radius: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #4caf50;
+    color: #4caf50;
+    background: #000;
 }
 
 video {
     width: 100%;
-    border-bottom: 3px solid #4caf50;
+    border-radius: 8px;
+    border: 3px solid #4caf50;
+}
+
+#time-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#time-info p {
+    color: #4caf50;
 }
 
 #spiral {
@@ -91,16 +81,4 @@ video {
 
 .hidden {
     display: none;
-}
-
-#time-info {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-}
-
-#time-info p {
-    margin: 0;
-    color: #555;
 }
